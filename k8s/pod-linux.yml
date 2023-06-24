@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: linux-pod
+  labels:
+    app: linux-pod
+  spec:
+    containers:
+      - name: alpine
+        image: alpine
