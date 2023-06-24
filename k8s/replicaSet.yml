@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-rs
+  labels:
+    app: web-rs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-pod
+    template:
+      metadata:
+        labels:
+          app: web-pod
+      spec:
+        containers:
+          - name: app
+            image: nginx
+            ports:
+              - containerPort: 80
+
