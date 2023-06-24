@@ -9,14 +9,14 @@ spec:
   selector:
     matchLabels:
       app: web-pod
-    template:
-      metadata:
-        labels:
-          app: web-pod
-      spec:
-        containers:
-          - name: app
-            image: nginx
-            ports:
-              - containerPort: 80
+  template:
+    metadata:
+      labels:
+        app: web-pod
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 80
 
