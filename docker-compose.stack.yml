@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    image: nginx:latest
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M
+    ports:
+    - "80:80"
